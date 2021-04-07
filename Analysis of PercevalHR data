@@ -44,11 +44,3 @@ for (k in 3:ncol(ratio_file3)){
 }
 
 write.csv(area_list,"~/AUC_results.csv") # the name of the output file can be modified as needed
-
-
-
-
-
-
-
-
