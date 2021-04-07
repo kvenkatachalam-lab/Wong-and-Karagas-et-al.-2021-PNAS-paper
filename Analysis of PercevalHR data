@@ -13,7 +13,7 @@ library(MESS)
 ratio_file <- read_csv("~/ratio.csv") # the name of the input file can be modified as needed
 ratio_file2 <- ratio_file
 
-# the following block sets the baseline to 1
+# The following block sets the baseline to 1.
 
 for (i in 3:ncol(ratio_file2)){
   col1 <- as.data.frame(ratio_file2[,c(i)])
@@ -28,7 +28,7 @@ area_list <- as.data.frame(matrix(0,nrow=0,ncol=1))
 
 duration_of_expt <- 120 # this is an important parameter that establishes the duration, after the addition event, over which AUC will be calciulated 
 
-# following block determines AUC for each column with PercevalHR ratios
+# The following block determines AUC for each column with PercevalHR ratios.
 
 for (k in 3:ncol(ratio_file3)){
   col1 <- as.data.frame(ratio_file3[,c(1,2,k)])
@@ -43,4 +43,4 @@ for (k in 3:ncol(ratio_file3)){
   area_list <- as.data.frame(rbind(area_list,area))
 }
 
-write.csv(area_list,"~/AUC_results.csv") # the name of the output file can be modified as needed
+write.csv(area_list,"~/AUC_results.csv") # The name of the output file can be modified as needed
