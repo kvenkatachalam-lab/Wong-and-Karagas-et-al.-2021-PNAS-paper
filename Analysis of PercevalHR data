@@ -4,11 +4,11 @@ library(tidyverse)
 library(readr)
 library(MESS)
 
-# data file to be used should be a CSV formatted as indicated here.
-# column 1 should contain the numbers 1, 2, 3.. that mark the events such as oligomycin A addition
-# column 2 should contain time in seconds
-# column 3 onward should contain the PercevalHR ratios
-# values from the beginning to the first addition event (1 in column 1) are considered the baseline and will be set to 1
+# Data file to be used should be a CSV formatted as indicated here. 
+# Column 1 should contain the numbers 1, 2, 3.. that mark the events such as oligomycin A addition. This column should NOT have a label.
+# Column 2 should contain time in seconds. This column can have any label.
+# Column 3 onward should contain the PercevalHR ratios. These columns can have any label.
+# Values from the beginning to the first addition event (1 in column 1) are considered the baseline and will be set to 1
 
 ratio_file <- read_csv("~/ratio.csv") # the name of the input file can be modified as needed
 ratio_file2 <- ratio_file
